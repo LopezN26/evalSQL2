@@ -62,6 +62,11 @@ $users = $preparedQuery->fetchAll();
                             <input type="hidden" name="user_id" value="<?php echo $user["id"]; ?>"/>
                             <input type="submit" value="Modifier"/>
                         </form>
+                    </td><td>
+                        <form method="post" action="delete.php">
+                            <input type="hidden" name="user_id" value="<?php echo $user["id"]; ?>"/>
+                            <input type="submit" value="Supprimer"/>
+                        </form>
                     </td>
                 </tr>
                 <?php
