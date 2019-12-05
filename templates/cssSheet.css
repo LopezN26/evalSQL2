@@ -28,3 +28,12 @@ td
     color: deeppink;
     background-color: deeppink;
 }
+a
+{
+    color : white;
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
