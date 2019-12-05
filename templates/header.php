@@ -7,9 +7,7 @@
         <link rel="stylesheet" href="../templates/cssSheet.css" />
     </head>
     <header>
-        HEADER  (╯°□°）╯︵ ┻━┻
-
-
+        <p>HEADER  (╯°□°）╯︵ ┻━┻</p>
     </header>
     <body>
     <ul>

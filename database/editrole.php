@@ -19,11 +19,11 @@ if(!empty($_POST) && isset($_POST))
     ?>
 
     <form action="updaterole.php" method="post">
-        <div>
+        <div class="responsive">
             <label for="name">Nom</label>
             <input type="text" name="name" value="<?php echo $role["name"]; ?>"/>
         </div>
-        <div>
+        <div class="responsive">
             <input type="hidden" name="id" value="<?php echo $role["id"] ?>" />
             <input type="submit" value="Modifier"/>
         </div>

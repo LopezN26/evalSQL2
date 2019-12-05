@@ -14,7 +14,7 @@ $preparedQuery->execute();
 // permet de récupérer le résultat de la requête exécutée stocker dans la variable roles
 $roles = $preparedQuery->fetchAll();
 ?>
-    <div>
+    <div class="responsive">
         <table>
             <tr> <!-- ligne -->
                 <th> <!-- colonne -->
