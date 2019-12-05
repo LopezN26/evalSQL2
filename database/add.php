@@ -17,3 +17,4 @@ $addUser->bindParam(":role_id", $_POST["role_id"]);
 //execution de la requete
 $addUser ->execute();
 
+header('Location:./userslist.php');

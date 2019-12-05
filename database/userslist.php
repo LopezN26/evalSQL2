@@ -59,7 +59,7 @@ $users = $preparedQuery->fetchAll();
                     </td>
                     <td>
                         <form method="post" action="edit.php">
-                            <input type="hidden" value="<?php echo $user["id"]; ?>"/>
+                            <input type="hidden" name="user_id" value="<?php echo $user["id"]; ?>"/>
                             <input type="submit" value="Modifier"/>
                         </form>
                     </td>
