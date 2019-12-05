@@ -1,6 +1,6 @@
 <?php
 
-$titrepage='Création';
+$titrepage='Création utilisateur';
 include '../templates/header.php';
 
 ?>

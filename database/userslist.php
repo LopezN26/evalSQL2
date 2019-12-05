@@ -1,5 +1,5 @@
 <?php
-$titre="Liste";
+$titre="Liste Utilisateurs";
 include "connection.php";
 include "../templates/header.php";
 //creation requete
