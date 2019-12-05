@@ -1,17 +1,24 @@
 <?php
 include 'connection.php';
 
-var_dump($_POST);
+if(!empty($_POST) && isset($_POST))
+{
+
+    var_dump($_POST);
+
+    $query = "DELETE FROM users where id=:id";
+
+    $deleteUser= $dbCo->prepare($query);
 
 
-$query = "DELETE FROM users where id=:id";
-
-$deleteUser= $dbCo->prepare($query);
+    $deleteUser->bindParam(":id", $_POST["user_id"]);
 
 
-$deleteUser->bindParam(":id", $_POST["user_id"]);
+    $deleteUser->execute();
 
-
-$deleteUser->execute();
-
-header('Location:./userslist.php');
+    header('Location:./userslist.php');
+}
+else
+{
+    header('Location:./userslist.php');
+}
