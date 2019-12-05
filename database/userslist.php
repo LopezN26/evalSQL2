@@ -37,6 +37,13 @@ $users = $preparedQuery->fetchAll();
         <?php
             foreach ($users as $user)
             {
+                //remplacer le role_id par son nom
+                $userRole=$user["role_id"]; //facilité l'utilisation de cette variable
+
+                $query2= "SELECT name FROM roles where id=$userRole"; //creation d'une 2eme requete pour récupérer le nom du role dans la table role
+                $preparedQuery2 = $dbCo->prepare($query2); //preparation 2eme requete
+                $preparedQuery2->execute(); //execution deuxieme requete
+                $role = $preparedQuery2->fetch(); //fetch pour récuper ce qui est retourner par l'instru SELECT FROM
                 ?>
                 <tr>
                     <td>
@@ -55,7 +62,7 @@ $users = $preparedQuery->fetchAll();
                         <?php echo $user["password"];?>
                     </td>
                     <td>
-                        <?php echo $user["role_id"];?>
+                        <?php echo $role["name"];?>
                     </td>
                     <td>
                         <form method="post" action="edit.php">
